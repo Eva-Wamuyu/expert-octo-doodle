@@ -24,7 +24,7 @@ let clearButton = document.getElementById("clear");
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
-
+    let alltasks = getItemsfromLocalStorage();
     if(newtodo.value !== ''){
         alltasks.push({
             task: newtodo.value,
@@ -96,6 +96,9 @@ let renderTasks = (alltasks)=>{
                 
             }else{
                 taskContainer.style.textDecoration = "none"
+                alltasks[index].checked = false
+                setItemstoLocalStorage(alltasks);
+                updateBottom();
             }
         })
 
@@ -155,17 +158,14 @@ toggle.addEventListener('click',()=>{
 
 clearButton.addEventListener("click", ()=>{
     
-    let alltaskss = getItemsfromLocalStorage();
-    for(let i = 0;i<alltaskss.length; i++){
-        if(!alltaskss[i]['checked']){
-            remaining = alltaskss.filter(checkRemainingTasks);
-            alltasks = remaining;
-        }
-       
-    }
-    console.log(alltasks)
-    setItemstoLocalStorage(alltasks)
+    let alltasks = getItemsfromLocalStorage();
+    let activeTasks = alltasks.filter(task => !task.checked);
+
+    setItemstoLocalStorage(activeTasks)
     renderTasks(getItemsfromLocalStorage()); 
+
+
+    
 })
 
 
@@ -215,12 +215,6 @@ function updateBottom(){
     }
 }
 
-
-function checkRemainingTasks(val){
-    
-    return !(val.checked);
-
-}
 
 renderTasks(alltasks);
 
