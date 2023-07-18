@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+    <div class="main">
+        <div class="upper">
+            <div class="upper-inner">
+                <div style="color:white;font-size:30px; font-weight:bold; margin-bottom: 30px; display: flex; justify-content: space-between;">
+                  <p>
+                    T O D O
+                  </p>
+                  <p>
+                    <img id="toggle-icon" src="./assets/icon-sun.svg" alt="lightmode">
+                  </p>
+                </div>
+                <form action="" class="inputform">
+                    <div class="input-div" style="display: flex; align-items: center; padding: 2px; background-color: rgb(80, 79, 79); border-radius: 5px;">
+                        <div id="radio">
+                            <input type="checkbox" class="checkbox" name="" >
+                        </div>
+                        <input type="text" name="" id="new-todo-input" placeholder="Create a new todo">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="lower-inner">
+
+            </div>
+        </div>
+
+        <div class="lowest">
+            <p id="number">
+               No Items Left
+            </p>
+            <p id="clear">
+                Clear Completed
+            </p>
+        </div>
+
+        <div class="bottom">
+            <div class="bottom-inner">
+                <p id="all">
+                    All
+                </p>
+                <p id="active">
+                    Active
+                </p>
+                <p id="completed">
+                    Completed
+                </p>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <script src="./script.js"></script>
+    <!-- <script src="./main.js"></script> -->
+
+</body>
+</html>

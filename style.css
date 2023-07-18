@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.dark{
+    background-color: black;
+}
+.light{
+    background-color: #dce2e4;
+}
+
+.main{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.upper{
+    background-image: linear-gradient(to right, blue, violet);
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+}
+
+.upper-inner{
+    padding-top: 5vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vh;
+}
+
+#radio{
+    background-color: rgb(80, 79, 79);
+    border: none;
+    color: grey;
+    padding:10px;
+   
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    clip-path: circle(46% at 50% 50%);
+    
+}
+
+input[type="text"]{
+    padding: 10px;
+    width: 40%;
+    background-color: rgb(80, 79, 79);
+    border: none;
+    outline: none;
+    color: grey;
+}
+
+.lower{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75vh;
+    
+}
+
+.lower-inner{
+    background-color: rgb(80, 79, 79); 
+    height: auto;
+    width: 40%;
+    border-radius: 5px;
+    position: absolute;
+    top: 30vh;
+    color: white;
+    
+}
+
+#all:focus{
+    color: red;
+
+}
+.taskitem{
+    display: flex;
+    padding: 10px;
+    border-bottom: grey 1px solid;
+    
+}
+
+.taskitem > div{
+    margin-left: 10px;
+}
+.bottom{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+   
+}
+.bottom-inner, .lowest{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(80, 79, 79);
+    padding: 10px;
+    border-radius: 4px;
+    color: grey;
+    
+
+}
+.lowest{
+   
+    margin: auto;
+
+}
+
+.bottom p, #clear{
+    cursor: pointer;
+}
+
+@media screen and (max-width:767px){
+    .upper-inner,.lower-inner, .bottom-inner, input[type="text"], .lowest{
+        width: 90%;
+      
+    }
+
+    
+}
