@@ -163,6 +163,7 @@ clearButton.addEventListener("click", ()=>{
         }
        
     }
+    console.log(alltasks)
     setItemstoLocalStorage(alltasks)
     renderTasks(getItemsfromLocalStorage()); 
 })
@@ -171,8 +172,14 @@ clearButton.addEventListener("click", ()=>{
 
 function getItemsfromLocalStorage(){
     let storedItems = localStorage.getItem('alltasks');
+    if (storedItems == null){
+        return []
+    }
+    else{
+        return JSON.parse(storedItems);
+    }
     
-    return JSON.parse(storedItems);
+    
     
 }
 
